@@ -1,0 +1,12 @@
+id: AssetFieldOptions
+name: <__trans phrase="AssetFieldOptions">
+version: 0.1
+description: <__trans phrase="Adds options to Asset typed field such as resolution of image.">
+l10n_class: MT::AssetFieldOptions::L10N
+customfield_types: $AssetFieldOptions::MT::AssetFieldOptions::App::customfield_types
+
+applications:
+  cms:
+    callbacks:
+      app_pre_listing_list_asset: $AssetFieldOptions::MT::AssetFieldOptions::App::app_pre_listing_list_asset
+      cms_pre_save.asset: $AssetFieldOptions::MT::AssetFieldOptions::App::cms_pre_save_asset
